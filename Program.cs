@@ -20,7 +20,7 @@ namespace Biggest_File_Deletion_App
                 //Finding the largest file in the directory
                 // File names
                 string[] fns = Directory.GetFiles(directoryPath);
-                // Order by size
+                // Order by size (used Language Integrated Query (LINQ))
                 var sort = from fn in fns
                            orderby new FileInfo(fn).Length descending
                            select fn;
